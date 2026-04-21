@@ -6,9 +6,27 @@ git clone https://github.com/ayushmallah/Histogram-Based-Fake-Image-Detection-an
 
 2. Install Dependencies
 pip install -r requirements.txt
-
-or
-
+        or
 pip3 install -r requirements.txt
 
+3. Project Structure
+Ensure your Project folder looks like this:
+│── main.py
+│── model.pkl
+│── requirements.txt
+│
+├── dataset/
+│ ├── fake/images
+│ └── real/images
 
+4. Update Dataset Path
+Open gui.py and make sure dataset paths are correct:
+fake_path = "dataset/fake"
+real_path = "dataset/real"
+
+5. Run the train_model.py first it will train on the images you provide.
+python train_model.py
+        or
+python3 train_model.py
+
+6. 
