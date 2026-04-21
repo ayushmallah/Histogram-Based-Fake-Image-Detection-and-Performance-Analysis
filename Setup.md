@@ -13,11 +13,11 @@ pip install -r requirements.txt
 Ensure your Project folder looks like this:<br/>
 │── main.py<br/>
 │── model.pkl<br/>
-│── requirements.txt
+│── requirements.txt<br/>
 │
-├── dataset/
-│ ├── fake/images
-│ └── real/images
+├── dataset/<br/>
+│ ├── fake/images<br/>
+│ └── real/images<br/>
 
 4. Update Dataset Path
 Open gui.py and make sure dataset paths are correct:
