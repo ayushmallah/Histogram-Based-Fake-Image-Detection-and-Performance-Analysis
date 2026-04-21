@@ -14,13 +14,13 @@ A trained machine learning model (e.g., Naive Bayes / SVM / Logistic Regression)
 The system outputs whether the image is Real or Fake, along with probability scores.
 
 # Technologies Used
-Python
-OpenCV
-NumPy
-Matplotlib
-Scikit-learn
-Tkinter (for GUI)
-Joblib (for model saving/loading)
+* Python
+* OpenCV
+* NumPy
+* Matplotlib
+* Scikit-learn
+* Tkinter (for GUI)
+* Joblib (for model saving/loading)
 
 # Features
 Histogram-based feature extraction
