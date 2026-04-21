@@ -23,11 +23,11 @@ The system outputs whether the image is Real or Fake, along with probability sco
 * Joblib (for model saving/loading)
 
 # Features
-Histogram-based feature extraction
-Lightweight and fast detection
-Simple graphical user interface
-Model evaluation using confusion matrix and ROC curve
-Report generation functionality
+* Histogram-based feature extraction
+* Lightweight and fast detection
+* Simple graphical user interface
+* Model evaluation using confusion matrix and ROC curve
+* Report generation functionality
 
 # Dataset
 The dataset consists of two categories:
@@ -41,15 +41,15 @@ Images are used to train and test the model for classification.
 The model is trained to distinguish patterns in histogram distributions. Fake images often show unnatural pixel distributions compared to real images, which helps in accurate classification.
 
 # Limitations
-Accuracy depends on dataset quality
-May not detect highly advanced deepfake images
-Works best with controlled datasets
+* Accuracy depends on dataset quality
+* May not detect highly advanced deepfake images
+* Works best with controlled datasets
 
 # Future Scope
-Integration with deep learning (CNN models)
-Real-time detection using camera input
-Web-based deployment
-Improved accuracy with larger datasets
+* Integration with deep learning (CNN models)
+* Real-time detection using camera input
+* Web-based deployment
+* Improved accuracy with larger datasets
 
 # Author
 Developed as part of a major project in the field of image forensics and machine learning.
