@@ -6,7 +6,7 @@ git clone https://github.com/ayushmallah/Histogram-Based-Fake-Image-Detection-an
 
 2. Install Dependencies <br/>
 pip install -r requirements.txt
-       <br/> &emspor
+       <br/> &emsp or
 <br/>pip3 install -r requirements.txt
 
 3. Project Structure
