@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 METRICS_FILE = os.path.join(BASE_DIR, "metrics.json")
 
 def get_dataset_info():
-    fake_path = "/Users/ayushkumarmallah/Major Project/dataset/fake"
-    real_path = "/Users/ayushkumarmallah/Major Project/dataset/real"
+    fake_path = "Fake_Images DataSet Path"
+    real_path = "Real_Images DataSet Path"
 
     valid_extensions = (".png", ".jpg", ".jpeg")
 
@@ -51,8 +51,8 @@ def evaluate_model():
     import matplotlib.pyplot as plt
     from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_curve, auc
 
-    fake_path = "/Users/ayushkumarmallah/Major Project/dataset/fake"
-    real_path = "/Users/ayushkumarmallah/Major Project/dataset/real"
+    fake_path = "Fake_Images DataSet Path"
+    real_path = "Real_Images DataSet Path"
 
     y_true, y_pred, y_prob = [], [], []
     valid_extensions = (".png", ".jpg", ".jpeg")
@@ -544,8 +544,8 @@ def show_histogram(image_path):
 
 def database_information():
 
-    fakeImagesPath = "/Users/ayushkumarmallah/Major Project/dataset/fake"
-    realImagesPath = "/Users/ayushkumarmallah/Major Project/dataset/real"
+    fakeImagesPath = "Fake_Images DataSet Path"
+    realImagesPath = "Real_Images DataSet Path"
 
     numberOfFakeFiles = len(
         [
