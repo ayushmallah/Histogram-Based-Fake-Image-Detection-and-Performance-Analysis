@@ -27,6 +27,26 @@ real_path = "dataset/real"<br/>
 5. Run the train_model.py first it will train on the images you provide.<br/>
 python train_model.py
 <br/>&emsp;&emsp;&emsp;&emsp;or
-<br/>;python3 train_model.py
+<br/>python3 train_model.py
 
-6. 
+6. Run the main file:
+<br/> python3 gui.py
+
+7. How to Use
+- Click Upload
+-  Click Detect
+- View:
+   * Prediction (Real/Fake)
+   * Confidence Score
+   * Image Analysis (mean, noise, edges, etc.)
+- Click Download Report ---> Save Pdf Report
+
+8. Output Files
+* Generated Images --> generated/ folder
+* PDF Report --> User-selected location
+* Metrics(optional) --> metrics.json
+
+Requirements
+* Python 3.8+
+* Windows / macOS / Linux
+* Minimum 4GB RAM recommended
