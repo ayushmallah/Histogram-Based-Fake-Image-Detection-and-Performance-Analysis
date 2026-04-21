@@ -14,15 +14,15 @@ Ensure your Project folder looks like this:<br/>
 │── main.py<br/>
 │── model.pkl<br/>
 │── requirements.txt<br/>
-
+│
 ├── dataset/<br/>
 │ ├── fake/images<br/>
 │ └── real/images<br/>
 
 4. Update Dataset Path
-Open gui.py and make sure dataset paths are correct:
-fake_path = "dataset/fake"
-real_path = "dataset/real"
+Open gui.py and make sure dataset paths are correct:<br/>
+fake_path = "dataset/fake"<br/>
+real_path = "dataset/real"<br/>
 
 5. Run the train_model.py first it will train on the images you provide.
 python train_model.py
