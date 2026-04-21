@@ -14,7 +14,7 @@ Ensure your Project folder looks like this:<br/>
 │── main.py<br/>
 │── model.pkl<br/>
 │── requirements.txt<br/>
-│<br/>
+<br/>
 ├── dataset/<br/>
 │ ├── fake/images<br/>
 │ └── real/images<br/>
