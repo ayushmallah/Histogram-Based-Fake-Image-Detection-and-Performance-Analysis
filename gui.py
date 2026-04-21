@@ -16,6 +16,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.pagesizes import A4
 
+
 metrics_loaded_once = False
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -45,123 +46,6 @@ def load_metrics():
             return json.load(f)
     return None
 
-def evaluate_model():
-    import os
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_curve, auc
-
-    fake_path = "Fake_Images DataSet Path"
-    real_path = "Real_Images DataSet Path"
-
-    y_true, y_pred, y_prob = [], [], []
-    valid_extensions = (".png", ".jpg", ".jpeg")
-
-    def process_folder(folder_path, label):
-        for file in os.listdir(folder_path):
-            if not file.lower().endswith(valid_extensions):
-                continue
-
-            path = os.path.join(folder_path, file)
-
-            try:
-                features, *_ = extractImageData(path)
-
-                # 🔹 Ensure correct shape
-                if len(features) != model.n_features_in_:
-                    raise ValueError(f"Feature mismatch: {len(features)} vs {model.n_features_in_}")
-
-                features = features.reshape(1, -1)
-
-                pred = model.predict(features)[0]
-                prob = model.predict_proba(features)[0][1]
-
-                y_true.append(label)
-                y_pred.append(pred)
-                y_prob.append(prob)
-
-            except Exception as e:
-                raise e
-
-    # 🔹 Run both datasets
-    process_folder(fake_path, 0)
-    process_folder(real_path, 1)
-
-
-    if len(y_true) == 0:
-        return None
-
-    # 🔹 Metrics
-    accuracy = accuracy_score(y_true, y_pred)
-    precision = precision_score(y_true, y_pred, zero_division=0)
-    recall = recall_score(y_true, y_pred, zero_division=0)
-    f1 = f1_score(y_true, y_pred, zero_division=0)
-
-    cm = confusion_matrix(y_true, y_pred)
-
-    if cm.shape == (2, 2):
-        tn, fp, fn, tp = cm.ravel()
-        specificity = tn / (tn + fp) if (tn + fp) != 0 else 0
-    else:
-        specificity = 0
-
-    # 🔹 ROC
-    if len(set(y_true)) < 2:
-
-        fpr, tpr, roc_auc = [0], [0], 0
-    else:
-        fpr, tpr, _ = roc_curve(y_true, y_prob)
-        roc_auc = auc(fpr, tpr)
-
-    save_dir = os.getcwd()
-
-
-    # =====================
-    # ROC Curve
-    # =====================
-    plt.figure()
-    plt.plot(fpr, tpr, label=f"AUC = {roc_auc:.2f}")
-    plt.xlabel("False Positive Rate")
-    plt.ylabel("True Positive Rate")
-    plt.title("ROC Curve")
-    plt.legend()
-    plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, "roc_curve.png"))
-    plt.close()
-
-    # =====================
-    # Confusion Matrix
-    # =====================
-    plt.figure()
-    plt.imshow(cm, interpolation='nearest')
-    plt.title("Confusion Matrix")
-    plt.colorbar()
-
-    plt.xticks(np.arange(2), ["Fake", "Real"])
-    plt.yticks(np.arange(2), ["Fake", "Real"])
-
-    for i in range(cm.shape[0]):
-        for j in range(cm.shape[1]):
-            plt.text(j, i, cm[i, j], ha="center", va="center")
-
-    plt.xlabel("Predicted")
-    plt.ylabel("Actual")
-
-    plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, "confusion_matrix.png"))
-    plt.close()
-
-    metrics = {
-        "accuracy": accuracy,
-        "precision": precision,
-        "recall": recall,
-        "specificity": specificity,
-        "f1": f1,
-        "auc": roc_auc,
-    }
-
-    save_metrics(metrics)
-    return metrics
 
 
 def generate_pdf_report(
@@ -183,7 +67,15 @@ def generate_pdf_report(
         metrics = load_metrics()
         
         if metrics is None:
-            metrics = evaluate_model()
+            metrics = {
+        "accuracy": 0,
+        "precision": 0,
+        "recall": 0,
+        "specificity": 0,
+        "f1": 0,
+        "auc": 0,
+        "timestamp": "Not Available"
+        }
         
         metrics_loaded_once = True
     else:
