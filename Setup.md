@@ -4,9 +4,9 @@ Follow the steps below to set up and run the Histogram-Based Fake Image Detectio
 1. Clone the Repository
 git clone https://github.com/ayushmallah/Histogram-Based-Fake-Image-Detection-and-Performance-Analysis.git
 
-2. Install Dependencies
+2. Install Dependencies <br/>
 pip install -r requirements.txt
-       <br/> or
+       <br/> \t or
 <br/>pip3 install -r requirements.txt
 
 3. Project Structure
