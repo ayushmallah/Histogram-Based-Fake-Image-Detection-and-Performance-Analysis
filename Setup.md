@@ -11,9 +11,9 @@ pip install -r requirements.txt
 
 3. Project Structure
 Ensure your Project folder looks like this:
-<br/> │── main.py
-<br/> │── model.pkl
-<br/> │── requirements.txt
+<br/> │── main.py<br/>
+<br/> │── model.pkl<br/>
+<br/> │── requirements.txt<br/>
 <br/> │
 <br/>├── dataset/
 <br/>│ ├── fake/images
