@@ -27,6 +27,6 @@ real_path = "dataset/real"<br/>
 5. Run the train_model.py first it will train on the images you provide.<br/>
 python train_model.py
 <br/>&emsp;&emsp;&emsp;&emsp;or
-<br/>&emsp;&emsp;&emsp;&emsp;python3 train_model.py
+<br/>;python3 train_model.py
 
 6. 
