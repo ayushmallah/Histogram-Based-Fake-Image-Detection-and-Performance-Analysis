@@ -1,7 +1,7 @@
 # How to run the Project
 Follow the steps below to set up and run the Histogram-Based Fake Image Detection System on your local machine.
 
-1. Clone the Repository
+1. Clone the Repository <br/>
 git clone https://github.com/ayushmallah/Histogram-Based-Fake-Image-Detection-and-Performance-Analysis.git
 
 2. Install Dependencies <br/>
@@ -24,9 +24,9 @@ Open gui.py and make sure dataset paths are correct:<br/>
 fake_path = "dataset/fake"<br/>
 real_path = "dataset/real"<br/>
 
-5. Run the train_model.py first it will train on the images you provide.
+5. Run the train_model.py first it will train on the images you provide.<br/>
 python train_model.py
-        or
-python3 train_model.py
+<br/>&emsp;&emsp;&emsp;&emsp;or
+<br/>&emsp;&emsp;&emsp;&emsp;python3 train_model.py
 
 6. 
