@@ -50,3 +50,4 @@ Requirements
 * Python 3.8+
 * Windows / macOS / Linux
 * Minimum 4GB RAM recommended
+* Dataset --> https://www.kaggle.com/datasets/shivamardeshna/real-and-fake-images-dataset-for-image-forensics
