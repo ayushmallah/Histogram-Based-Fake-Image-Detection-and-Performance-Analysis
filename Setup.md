@@ -14,10 +14,9 @@ Ensure your Project folder looks like this:<br/>
 │── main.py<br/>
 │── model.pkl<br/>
 │── requirements.txt<br/>
-│
 ├── dataset/<br/>
-│ &emsp;&emsp;&emsp;&emsp;├── fake/images<br/>
-│ &emsp;&emsp;&emsp;&emsp;└── real/images<br/>
+&emsp;&emsp;&emsp;&emsp;├── fake/images<br/>
+&emsp;&emsp;&emsp;&emsp;└── real/images<br/>
 
 4. Update Dataset Path
 Open gui.py and make sure dataset paths are correct:<br/>
