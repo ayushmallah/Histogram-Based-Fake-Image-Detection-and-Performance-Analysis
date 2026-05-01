@@ -16,15 +16,14 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.pagesizes import A4
 
-
 metrics_loaded_once = False
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 METRICS_FILE = os.path.join(BASE_DIR, "metrics.json")
 
 def get_dataset_info():
-    fake_path = "Fake_Images DataSet Path"
-    real_path = "Real_Images DataSet Path"
+    fake_path = "fake images dataset path"
+    real_path = "real images dataset path"
 
     valid_extensions = (".png", ".jpg", ".jpeg")
 
@@ -45,6 +44,7 @@ def load_metrics():
         with open(METRICS_FILE, "r") as f:
             return json.load(f)
     return None
+
 
 
 
@@ -76,6 +76,7 @@ def generate_pdf_report(
         "auc": 0,
         "timestamp": "Not Available"
         }
+        
         
         metrics_loaded_once = True
     else:
@@ -436,8 +437,8 @@ def show_histogram(image_path):
 
 def database_information():
 
-    fakeImagesPath = "Fake_Images DataSet Path"
-    realImagesPath = "Real_Images DataSet Path"
+    fakeImagesPath = "fake images dataset path"
+    realImagesPath = "real images dataset path"
 
     numberOfFakeFiles = len(
         [
