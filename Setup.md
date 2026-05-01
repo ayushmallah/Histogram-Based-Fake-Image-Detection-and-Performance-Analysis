@@ -51,3 +51,4 @@ Requirements
 * Minimum 4GB RAM recommended
 * Dataset --> https://www.kaggle.com/datasets/shivamardeshna/real-and-fake-images-dataset-for-image-forensics
 * Model file --> https://drive.google.com/file/d/12sWwT-hGFVtv0Fe8dRSeKK1eS2jfEFam/view?usp=drive_link
+* Small dataset file --> https://drive.google.com/drive/folders/1r3Dquzy1OxFCUAeMIdbheuPs6WhZEcqj?usp=drive_link
