@@ -32,8 +32,8 @@ The system outputs whether the image is Real or Fake, along with probability sco
 # Dataset
 The dataset consists of two categories:
 
-Real Images
-Fake/Manipulated Images
+* Real Images
+* Fake/Manipulated Images
 
 Images are used to train and test the model for classification.
 
